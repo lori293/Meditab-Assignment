@@ -1,0 +1,45 @@
+<div class="outer-wrapper">
+    <div class="inner-wrapper">
+      <div class="left-box">
+        <div class="title-name">Search By</div>
+        <div class="search-field-section">
+          <div *ngFor="let field of searchFields" class="search-field">
+            <div class="field-info">
+              <label class="field-symbol">{{field.symbol}}</label>
+              <label class="field-name">{{ field.displayName }}</label>
+            </div>
+            <input class="field-input" [(ngModel)]="field.value" (keyup)="handleFieldChange($event, field)">
+          </div>
+        </div>
+      </div>
+      
+      
+      <div class="right-box">
+        <div class="title-name">
+          <div>Search</div>
+          <div>Use % sign to search anywhere in the column</div>
+        </div>
+        <div class="search-button">
+          <div class="search-bar">
+            <input #searchInput style="width: 95%; text-decoration: none;" type="text" placeholder="Search" [(ngModel)]="searchText" (input)="handleSearchInputChange($event)" (keyup.enter)="handleEnterKey($event)">
+          </div>
+          <div class="button-func">
+            <button>Search</button>
+            <button (click)="clearSearch()">Clear</button>
+          </div>
+        </div>
+            
+        <div class="result-table">
+          <div class="title-result-name">Results</div>
+          <div class="result-table-output">
+            <table>
+              <tr>
+                <th *ngFor="let column of resultColumns">{{ column }}</th>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+  

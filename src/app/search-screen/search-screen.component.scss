@@ -1,0 +1,129 @@
+/* Layout */
+.outer-wrapper {
+    padding: 10px;
+  }
+  .inner-wrapper {
+    display: flex;
+    height: 95vh;
+  }
+  .left-box {
+    width: 30%;
+    margin-right: 10px;
+    border: 1px solid black;
+  }
+  .right-box {
+    width: 70%;
+    border: 1px solid black;
+  }
+  
+  /* Titles */
+  .title-name, .title-result-name {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+  }
+  .title-name {
+    background-color: rgb(125, 148, 62);
+  }
+  .title-result-name {
+    background-color: rgba(78, 62, 148, 0.744);
+  }
+  
+  /* Search Fields */
+  .search-field-section {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+  }
+  .search-button{
+    display: flex;
+    align-items: baseline;
+    padding: 10px;
+  }
+  .search-field {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  .field-info {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+  }
+  .field-symbol, .field-name {
+    margin-right: 8px;
+    font-size: 14px;
+  }
+  .field-input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+  }
+  .field-input:focus {
+    outline: none;
+  }
+  
+  /* Search Bar */
+  .search-button, .search-bar {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  .search-bar {
+    width: 70%;
+  }
+  .search-bar input[type="text"] {
+    width: 100%;
+    padding: 7px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+  }
+  .search-bar input[type="text"]:focus {
+    outline: none;
+  }
+  .search-bar input[type="text"]::placeholder {
+    color: #aaa;
+  }
+  
+  /* Buttons */
+  .button-func, .search-button button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .search-button button {
+    background-color: #007bff;
+    color: #fff;
+    margin-right: 10px;
+  }
+  .search-button button:hover {
+    background-color: #0056b3;
+  } 
+  .search-button button:last-child {
+    margin-right: 0;
+  }
+  
+  /* Results Table */
+  .result-table {
+    margin-top: 20px;
+  }
+  .result-table-output {
+    padding: 10px;
+  }
+  .result-table table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .result-table table th, .result-table table td {
+    background-color: grey;
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    font-weight: bold;
+  }
+  
